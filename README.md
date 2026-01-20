@@ -47,7 +47,7 @@ This lab directly applies concepts from your Week 4 readings:
 - **Design tokens:** Frost emphasizes that design systems need "design tokens"—the abstract values (colors, spacing, typography) that ensure consistency. You'll implement these as a shared configuration.
 
 ### The "Tiny Bootstraps" Philosophy
-Frost quotes Dave Rupert: "Responsive deliverables should look a lot like tiny Bootstraps." Your mini design system is exactly this—a custom, purpose-built component library rather than a one-size-fits-all framework.
+Frost quotes Dave Rupert: _"Responsive deliverables should look a lot like tiny Bootstraps."_ Your mini design system is exactly this—a custom, purpose-built component library rather than a one-size-fits-all framework.
 
 ---
 
