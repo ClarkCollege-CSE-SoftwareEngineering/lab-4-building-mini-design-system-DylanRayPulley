@@ -1,3 +1,24 @@
+Dylan Pulley
+
+2/2/2026
+
+Reflection Section (minimum 150 words) answering:
+
+Composing the alert molecule from the Icon, Text, and Button atoms demonstrates the value of atomic design because it proves how if small elements can be tied together to create a larger more complex element without having to rewrite to restructure the smaller elements.
+
+Design tokens role is to replace hardcoded values in exchange for creation of values that can be reused across features, making implementation consistent.
+
+If I wanted to add a dark mode, I would update the token values and add a secondary set dedicated to dark mode, since all values already are already referencing the token values, and then implement a theme switching logic which would direct to the current token set being used.   
+
+Key Concepts section listing 3-5 things you learned about atomic design
+	
+	1. Testing component behavior and composition with React Testing Library
+
+	2. Design tokens allow for consistent spacing, and color selecting
+
+	3. Atomic design; atoms, molecules, organisms
+
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/oRCZ8LbN)
 # Lab 4: Building a Mini Design System
 
@@ -92,6 +113,8 @@ Take a few minutes to read through the token files and the Icon/Text components 
 ✅ **Checkpoint:** Run `npm run typecheck` — it should complete with no errors.
 
 🤔 **Reflection Question:** Look at `src/tokens/colors.ts`. How does organizing colors by semantic meaning (success, warning, error, info) differ from organizing them by visual property (green, yellow, red, blue)? What advantages does the semantic approach offer?
+
+Organizing them in this way makes each color easier to understand what it is and where is connects to. The advantage of this approach is that as the program expands, the developers can easily change this value as well as easily understand what its use is, as the purposed of the name isn't vague, as it would be naming it just "green" or "red"
 
 ---
 
@@ -283,6 +306,8 @@ describe('Button', () => {
 ✅ **Checkpoint:** Run `npm test` — your Button tests should pass.
 
 🤔 **Reflection Question:** Notice how the Button component uses `spacing.xs`, `spacing.sm`, etc. instead of hardcoded values like `'4px'`, `'8px'`. What would you need to change if your design team decided to increase all spacing by 2px?
+
+Since the components reference the spacing sizes themselves only the reference values would have to be changed, instead of changing the values in every location they would be used as if they were hardcoded. 
 
 ---
 
@@ -485,6 +510,9 @@ describe('Alert', () => {
 ✅ **Checkpoint:** Run `npm run test:coverage` — you should have at least 90% coverage.
 
 🤔 **Reflection Question:** The Alert molecule imports and uses Icon, Text, and Button atoms. If you needed to update how all buttons look across your entire application, how many files would you need to change? How does this demonstrate Frost's point about the value of atomic design?
+
+
+The only file that would need to be changed is the button atom file since all other buttons through out the program only rely on the that button atom. This demonstrates frosts point by minimizing possible bugs, as well as changes saleable
 
 ---
 
